@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { projects, type Project } from "@/data/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { project: Project } => {
     const project = projects.find((p) => p.slug === params.slug);
     if (!project) throw notFound();
     return { project };
