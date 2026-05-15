@@ -130,7 +130,7 @@ function Projects() {
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold">{p.name}</h3>
                 {p.status && (
-                  <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+                  <span className="rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">
                     {p.status}
                   </span>
                 )}
@@ -142,7 +142,7 @@ function Projects() {
                 {p.tech.map((t) => (
                   <li
                     key={t}
-                    className="rounded-md bg-secondary px-2 py-0.5 text-[11px] font-medium text-secondary-foreground"
+                    className="rounded-md border border-primary/30 bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary"
                   >
                     {t}
                   </li>
