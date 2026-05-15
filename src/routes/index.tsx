@@ -72,8 +72,9 @@ function Hero() {
             className="bg-clip-text text-transparent"
             style={{ backgroundImage: "var(--gradient-brand)" }}
           >
-            Ewuoso
+            Ayomikun{" "}
           </span>
+          Ewuoso
         </h1>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
           Fullstack Software Engineer · AI Systems & Backend Engineer
@@ -342,14 +343,14 @@ function Contact() {
             <Mail className="h-5 w-5 text-muted-foreground" />
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/Blaze-master"
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-between rounded-xl border border-border bg-card p-5 transition hover:border-foreground/30"
           >
             <div>
               <p className="text-xs uppercase tracking-widest text-muted-foreground">GitHub</p>
-              <p className="mt-1 text-sm font-medium">@emmanuelewuoso</p>
+              <p className="mt-1 text-sm font-medium">@Blaze-master</p>
             </div>
             <Github className="h-5 w-5 text-muted-foreground" />
           </a>
