@@ -33,7 +33,7 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectPage() {
-  const { project: p } = Route.useLoaderData();
+  const { project: p } = Route.useLoaderData() as { project: Project };
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
