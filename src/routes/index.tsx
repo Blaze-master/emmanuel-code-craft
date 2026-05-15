@@ -42,14 +42,38 @@ function Index() {
 
 function Hero() {
   return (
-    <section className="border-b border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+    <section className="relative overflow-hidden border-b border-border/60">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "var(--gradient-hero)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-32 top-40 h-72 w-72 rounded-full opacity-30 blur-3xl"
+        style={{ background: "var(--primary)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-32 top-10 h-72 w-72 rounded-full opacity-20 blur-3xl"
+        style={{ background: "var(--accent)" }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+          </span>
           Available for new work
         </div>
         <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl">
-          Emmanuel Ewuoso
+          Emmanuel{" "}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{ backgroundImage: "var(--gradient-brand)" }}
+          >
+            Ewuoso
+          </span>
         </h1>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
           Fullstack Software Engineer · AI Systems & Backend Engineer
@@ -62,6 +86,7 @@ function Hero() {
           <a
             href="#projects"
             className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+            style={{ boxShadow: "var(--shadow-glow)" }}
           >
             View Projects
             <ArrowUpRight className="h-4 w-4" />
@@ -105,7 +130,7 @@ function Projects() {
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-semibold">{p.name}</h3>
                 {p.status && (
-                  <span className="rounded-full border border-border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+                  <span className="rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-accent">
                     {p.status}
                   </span>
                 )}
@@ -117,7 +142,7 @@ function Projects() {
                 {p.tech.map((t) => (
                   <li
                     key={t}
-                    className="rounded-md bg-secondary px-2 py-0.5 text-[11px] font-medium text-secondary-foreground"
+                    className="rounded-md border border-primary/30 bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary"
                   >
                     {t}
                   </li>
