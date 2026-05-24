@@ -31,7 +31,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row md:items-center">
         <p>© {new Date().getFullYear()} Ayomikun Ewuoso. Built with care.</p>
         <div className="flex gap-6">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
+          <a href="https://github.com/Blaze-master/" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
           <a href="https://www.linkedin.com/in/emmanuel-ewuoso-0005801b8/" target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a>
           <a href="mailto:ewuoso03@gmail.com" className="hover:text-foreground">Email</a>
         </div>

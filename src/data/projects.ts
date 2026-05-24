@@ -2,7 +2,7 @@ export type Project = {
   slug: string;
   name: string;
   tagline: string;
-  status?: "In Progress" | "Live" | "Internal" | "Deployed";
+  status?: string;
   description: string;
   tech: string[];
   github?: string;
@@ -19,150 +19,151 @@ export const projects: Project[] = [
     slug: "maestro",
     name: "Maestro",
     tagline:
-      "AI-powered learning platform that turns documents into structured lessons, exercises, and exams.",
+      "AI-powered learning platform that turns documents into personalized and structured lessons, supplemented with assesments, visuals, and interactive elements.",
     status: "Live",
+    demo: "https://www.maestrolearningplatform.com/",
     description:
-      "Flagship fullstack platform that ingests learner documents and generates personalized lessons, practice exercises, and exams using LLMs.",
-    tech: ["Next.js", "FastAPI", "PostgreSQL", "LangChain", "OpenAI", "GCP"],
+      "Fullstack AI learning platform that ingests educational materials and converts them into structured topics, lessons, exercises, assessments, and enriched lesson experiences with contextual AI support.",
+    tech: ["Angular", "Express.js", "FastAPI", "PostgreSQL", "Gemini", "GCP", "Railway"],
     role: "Founder & Lead Engineer",
     problem:
       "Learners and educators spend hours converting raw study material into structured, testable curricula. Existing tools either summarize shallowly or lock content into rigid templates.",
     approach: [
-      "Designed a document ingestion pipeline (PDF, DOCX, slides) with chunking, embedding, and structured extraction.",
-      "Built an LLM orchestration layer that generates lessons, exercises, and exams aligned to extracted learning objectives.",
-      "Implemented personalized progression with spaced retrieval and difficulty adaptation per learner.",
-      "Shipped a Next.js frontend backed by a FastAPI service and PostgreSQL, deployed on GCP.",
+      "Built a multi-service architecture comprising an Angular frontend, Express backend, PostgreSQL database, and dedicated AI services.",
+      "Developed a document ingestion and topic extraction pipeline that transforms uploaded materials into structured learning hierarchies.",
+      "Implemented AI-powered lesson generation supporting customizable learning preferences and topic-driven navigation.",
+      "Designed lesson supplements that enrich generated lessons with contextual visuals, interactive elements, lightweight practice, and adaptive learning aids.",
+      "Built a context-aware chatbot that receives lesson, exercise, and assessment metadata to provide in-context explanations and assistance.",
+      "Integrated cloud-hosted execution infrastructure for evaluating generated coding activities and learner submissions."
     ],
     outcome:
-      "End-to-end platform converting raw study material into ready-to-use, AI-generated learning programs in minutes.",
+      "Transforms uploaded educational materials into interactive learning sessions that combine generated lessons, embedded supplements, assessments, and contextual AI guidance.",
     highlights: [
-      "Document ingestion pipeline",
-      "LLM-driven lesson & exam generation",
-      "Personalized learning workflows",
-      "Cloud-deployed fullstack architecture",
+      "Document ingestion & topic extraction",
+      "AI-generated lessons & assessments",
+      "Interactive lesson supplements",
+      "Context-aware educational chatbot",
+      "Code execution infrastructure",
+      "Distributed cloud architecture"
     ],
   },
+
   {
     slug: "medilingo",
     name: "MediLingo",
     tagline:
-      "Multilingual medical QA system inspired by a Zindi competition, with planned model fine-tuning.",
+      "Multilingual health QA system exploring retrieval-augmented and translation-based approaches for low-resource African languages.",
     status: "In Progress",
     description:
-      "AI/ML research project focused on multilingual NLP for medical question answering across low-resource languages.",
-    tech: ["Python", "PyTorch", "Transformers", "FastAPI"],
-    role: "AI/ML Engineer",
+      "AI/ML research project inspired by a multilingual health question-answering challenge, focused on improving medical QA quality across Luganda, Kiswahili, Akan, and Amharic.",
+    tech: ["Python", "PyTorch", "Transformers", "FAISS", "LlamaIndex", "HuggingFace", "Kaggle"],
+    role: "Fullstack Developer & AI/ML Engineer",
     problem:
-      "Quality medical QA in low-resource languages is limited. Generic LLMs hallucinate and lose domain accuracy across translations.",
+      "Access to reliable health information remains limited across many low-resource African languages. Existing multilingual models often struggle with factual consistency, medical terminology, and cross-language knowledge transfer.",
     approach: [
-      "Curating and normalizing multilingual medical QA datasets.",
-      "Designing an evaluation harness for factuality and clinical safety.",
-      "Planned fine-tuning of open-weight models with domain adapters.",
+      "Designed and evaluated two competing architectures: a native multilingual RAG pipeline and an English-pivot translation workflow.",
+      "Built reproducible experiment infrastructure driven by configuration files for model training, retrieval evaluation, and end-to-end benchmarking.",
+      "Planned construction of multilingual health corpora using translated and native medical resources for retrieval and generation.",
+      "Structured training and evaluation pipelines to compare translation quality, retrieval performance, and answer generation across languages.",
+      "Implemented experiment tracking and modular infrastructure to support rapid iteration across models and datasets."
     ],
     outcome:
-      "Active research direction targeting reliable multilingual clinical QA with measurable factuality gains.",
+      "Ongoing research exploring scalable approaches for delivering more reliable multilingual medical question answering in low-resource settings.",
     highlights: [
-      "Multilingual NLP",
-      "Domain fine-tuning roadmap",
-      "Clinical QA evaluation harness",
+      "Low-resource African language NLP",
+      "Dual-path architecture experimentation",
+      "Retrieval-augmented generation",
+      "Reproducible ML experimentation",
+      "Multilingual evaluation pipelines"
     ],
   },
+
   {
     slug: "bizmate",
     name: "BizMate",
     tagline:
-      "AI-powered Telegram assistant for SME operations — inventory, orders, customers, analytics.",
+      "Multi-agent AI assistant that helps SMEs manage operations through conversational workflows inside Telegram.",
     description:
-      "Agent-based assistant that lets small business owners manage operations through natural-language chat.",
-    tech: ["Python", "FastAPI", "LangChain", "PostgreSQL", "Telegram Bot API"],
+      "AI-powered business assistant enabling small businesses to manage inventory, orders, suppliers, customers, and operational insights through natural-language interaction.",
+    tech: ["Python", "Google ADK", "Gemini", "FastAPI", "SQLAlchemy", "MySQL", "Telegram Bot API"],
     role: "Backend & AI Engineer",
     problem:
-      "Many SMEs can't afford or operate full ERP tools but still need to track inventory, orders, customers, and basic analytics.",
+      "Small and medium businesses often rely on fragmented tools or manual processes for operational management, making inventory tracking, customer handling, and business oversight difficult to scale.",
     approach: [
-      "Designed an agent workflow with intent routing across inventory, orders, customers, and reporting tools.",
-      "Implemented a tool-using LLM agent backed by a structured PostgreSQL schema.",
-      "Wrapped the experience in a Telegram bot so users transact entirely from chat.",
+      "Designed a multi-agent architecture where specialized agents collaborate across business domains including registration, inventory, customer operations, supplier workflows, and analytics.",
+      "Implemented conversational orchestration using Google ADK to route user intent and coordinate task execution between agents.",
+      "Built backend services and a multi-tenant data model supporting multiple businesses, transactional workflows, and operational state management.",
+      "Integrated the system into Telegram to enable business operations entirely through chat-based interaction."
     ],
     outcome:
-      "Prototype demonstrating that core SME operations can run from a single conversational interface.",
+      "Prototype demonstrating how multi-agent systems and conversational interfaces can simplify day-to-day SME operations without traditional ERP complexity.",
     highlights: [
-      "Agent-based AI workflow",
-      "Conversational business operations",
-      "Structured backend tooling",
+      "Multi-agent orchestration",
+      "Conversational business workflows",
+      "Multi-tenant architecture",
+      "Telegram-native experience",
+      "AI-assisted operations"
     ],
   },
+
   {
     slug: "monolith-analytics",
-    name: "Monolith Analytics Dashboard",
+    name: "Monolith Analytics",
     tagline:
-      "Internal analytics for product usage, engagement, and AI interaction tracking.",
+      "Product analytics platform for monitoring usage, engagement, and AI adoption across the Maestro ecosystem.",
     status: "Internal",
     description:
-      "Production internal tool that surfaces product usage, engagement, and AI interaction metrics in one dashboard.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Recharts"],
-    role: "Fullstack Engineer",
+      "Internal analytics platform designed to surface user behavior, activation funnels, feature adoption, and conversational AI insights through interactive dashboards and natural-language exploration.",
+    tech: ["Python", "Streamlit", "PostgreSQL", "Pandas", "SQL"],
+    role: "Fullstack & Data Engineer",
     problem:
-      "Product and engineering teams lacked a unified view of how AI features were being used and where engagement dropped.",
+      "Understanding how users engage with AI-powered learning experiences required more than raw database queries. Product decisions needed accessible, real-time visibility into behavior, adoption, and platform performance.",
     approach: [
-      "Modeled an event schema covering sessions, AI calls, and feature usage.",
-      "Built dashboards for engagement funnels, retention, and AI interaction quality.",
-      "Optimized aggregate queries for fast time-range filtering.",
+      "Designed a modular analytics architecture that aggregates and transforms operational data into product-facing insights.",
+      "Built interactive dashboards for user growth, activation funnels, lesson engagement, feature usage, and chatbot adoption.",
+      "Implemented filtering, KPI tracking, and analytical workflows to support exploration across multiple dimensions of platform behavior.",
+      "Integrated an AI-powered analytics assistant capable of answering natural-language questions about platform data."
     ],
     outcome:
-      "Single source of truth for product analytics powering weekly review decisions.",
+      "Created a centralized analytics layer that enables faster product evaluation, insight discovery, and data-informed iteration across the Maestro platform.",
     highlights: [
-      "Engagement & retention views",
-      "AI interaction tracking",
-      "Production internal tool",
+      "Product analytics platform",
+      "Funnel & adoption analysis",
+      "AI analytics assistant",
+      "Interactive data exploration",
+      "Modular analytics architecture"
     ],
   },
-  {
-    slug: "ervis-contract-api",
-    name: "Ervis AI Contract Analysis API",
-    tagline:
-      "Backend API for AI-powered contract review and clause analysis on the Ervis Intelligence platform.",
-    description:
-      "Built the AI contract analysis API powering clause extraction, risk flagging, and review workflows for Ervis Intelligence.",
-    tech: ["Python", "FastAPI", "LangChain", "PostgreSQL", "OpenAI"],
-    role: "Backend Engineer (API ownership only)",
-    problem:
-      "Manual contract review is slow and inconsistent. The platform needed a reliable backend to extract clauses, flag risk, and structure review output.",
-    approach: [
-      "Designed clause-level extraction pipelines with LLM + rule-based validation.",
-      "Built risk-scoring and clause-classification endpoints consumed by the platform UI.",
-      "Implemented async job handling for long contracts and batch review.",
-    ],
-    outcome:
-      "Production AI API enabling structured contract review inside Ervis Intelligence.",
-    highlights: [
-      "Clause extraction pipeline",
-      "LLM + validation hybrid",
-      "Async review jobs",
-    ],
-  },
+
   {
     slug: "mastpin",
     name: "MastPin",
     tagline:
-      "Mast placement optimization using Particle Swarm Optimization and signal propagation modeling.",
+      "Telecom mast placement optimization platform using Particle Swarm Optimization and radio propagation modeling.",
     status: "Deployed",
+    demo: "https://mastpin.up.railway.app/",
     description:
-      "Deployed research + engineering project that optimizes telecom mast placement using PSO and signal propagation models.",
-    tech: ["Python", "NumPy", "Flask", "Leaflet"],
+      "Research and engineering project exploring optimized telecom mast placement through simulation-driven search and wireless coverage modeling, validated on a real-world case study.",
+    tech: ["Python", "Flask", "NumPy", "SciPy"],
     role: "Engineer & Researcher",
     problem:
-      "Mast placement decisions impact coverage and cost. Manual planning rarely explores the full search space.",
+      "Telecom mast placement requires balancing signal coverage, network performance, and infrastructure cost. Manual planning approaches struggle to efficiently explore large placement possibilities.",
     approach: [
-      "Modeled signal propagation across candidate sites with terrain-aware assumptions.",
-      "Implemented Particle Swarm Optimization to search placements maximizing coverage.",
-      "Shipped a deployed web app to visualize candidate placements on a map.",
+      "Modeled wireless signal propagation using the Hata-Okumura model to estimate coverage across candidate locations.",
+      "Implemented Particle Swarm Optimization (PSO) to search for mast configurations that improve signal distribution and infrastructure efficiency.",
+      "Built a Flask-based application exposing optimization and simulation workflows for experimentation and evaluation.",
+      "Developed and deployed an interactive web application for running optimization scenarios and visualizing placement outcomes.",
+      "Validated the system through a case study based on a real-world deployment scenario at Babcock University."
     ],
     outcome:
-      "Working tool that proposes optimized mast placements over a target region.",
+      "Delivered a deployed optimization platform capable of evaluating mast placement strategies and analyzing trade-offs between coverage quality and deployment cost.",
     highlights: [
+      "Metaheuristic Algorithms",
       "Particle Swarm Optimization",
-      "Signal propagation modeling",
-      "Deployed research tool",
+      "Hata-Okumura propagation model",
+      "Simulation-driven optimization",
+      "Real-world case study (Babcock University)",
+      "Deployed research platform"
     ],
-  },
+  }
 ];
