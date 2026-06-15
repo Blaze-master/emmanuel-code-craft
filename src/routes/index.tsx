@@ -342,11 +342,11 @@ function Skills() {
 const experience = [
   {
     company: "Overmind Technologies",
-    role: "Founder & Lead Software Engineer",
-    period: "Jul 2025 - Present",
+    role: "Lead Software Engineer",
+    period: "Mar 2026 - Present",
     points: [
       "Led development of AI systems across education, analytics, and automation, including the Maestro learning platform and Monolith analytics system.",
-      "Architected distributed multi-service systems using Node.js, PostgreSQL, and AI microservices integrated with LLMs (Gemini, Claude).",
+      "Architected distributed multi-service systems using Node.js, PostgreSQL, and AI microservices integrated with Google AI Studio.",
       "Built end-to-end AI pipelines for document ingestion, lesson generation, and adaptive learning workflows.",
       "Deployed and managed cloud infrastructure across Netlify, Railway, and Google Cloud Platform supporting ~2,000+ users across internal and pilot systems."
     ]
@@ -357,17 +357,17 @@ const experience = [
     role: "Data Engineer Intern",
     period: "Mar 2025 - Mar 2026",
     points: [
-      "Built Spark-based ETL pipelines processing large-scale financial transaction data across multiple systems.",
-      "Developed LLM-powered automation workflows for generating reconciliation configurations from functional requirements documents.",
-      "Built agent-based systems for schema discovery and semi-automated reconciliation logic across datasets.",
-      "Migrated legacy SSIS pipelines to PySpark and Airflow, improving reliability and reducing maintenance overhead by ~30%."
+      "Reduced reconciliation setup time from days to hours by building a configuration-driven Spark engine for reusable workflows.",
+      "Reduced reconciliation configuration effort by 70% through AI-assisted reconciliation workflow generation.",
+      "Migrated legacy SSIS pipelines to PySpark and Airflow, improving reliability and reducing maintenance overhead by ~30%.",
+      "Achieved 99.73% uptime by resolving recurring ETL failures across schema and pipeline issues.",
     ]
   },
 
   {
     company: "Skrima",
     role: "AI Systems Engineer",
-    period: "Sep 2025 - May 2026",
+    period: "Sep 2025 - Dec 2025",
     points: [
       "Built a multi-agent intervention recommendation system using LLM-driven workflows and structured decision logic.",
       "Designed backend services for processing behavioral signals and ranking intervention strategies.",
